@@ -41,7 +41,7 @@ this for a different amount of time and we will keep that in mind while evaluati
 with additional context if you would like to. Additionally, we have left a spot below for you to note
 
 ## Setup Instructions
-1. Fork this repository and clone to your loacl environment. 
+1. Fork this repository and clone to your local environment. 
 1. Install a version of Python 3 if you do not already have one. We recommend Python 3.8 or newer.
 1. You can use the built-in virtual environment creation within Python to create a sandboxed set of package installs. 
    If you already have a preferred method of virtualenv creation, feel free to proceed with your own method. 
