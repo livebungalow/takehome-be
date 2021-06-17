@@ -16,7 +16,7 @@ Sample data is provided in the `sample-data` folder.
 We have provided the stub for a Django command to import the data. Finish writing this code.
 You should use Django's ORM to model the data and store it in a local database.
 Then, utilize the Django Rest Framework to provide an API to query the models.
-A very basic basic API design here would simply return all of the data available.
+A very basic API design here would simply return all of the data available.
 You can choose to improve and refine this very basic API design, and we encourage you to do so.
 This will give us an opportunity to see how you approach API design.
 If you are running out of time, you can outline how you would have done things differently given more time.
