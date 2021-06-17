@@ -8,7 +8,7 @@ a common base for all candidates to work from and to hopefully save you a bit of
 If you need an introduction to Django, their docs are an excellent place to start: https://docs.djangoproject.com/en/3.2
 
 We encourage you to use the Django Rest Framework for developing your API. This is a framework that we use extensively 
-at Bungalow, and it provides some nice functionality out of the box.
+at Bungalow, and it provides some nice functionality out of the box. https://www.django-rest-framework.org/
 
 ## What to Build
 We would like you to build an API that can be used to query some information about houses.
@@ -40,14 +40,24 @@ less time into it for whatever reason, that is your choice. Feel free to indicat
 this for a different amount of time and we will keep that in mind while evaluating the project. You can also provide us
 with additional context if you would like to. Additionally, we have left a spot below for you to note
 
+## Public Forks
+We encourage you to try this project without looking at the solutions others may have posted. This will give the most
+honest representation of your abilities and skills. However, we also recognize that day-to-day programming often involves 
+looking at solutions others have provided and iterating on them. Being able to pick out the best parts and truly 
+understand them well enough to make good choices about what to copy and what to pass on by is a skill in and of itself. 
+As such, if you do end up referencing someone else's work and building upon it, we ask that you note that as a comment. 
+Provide a link to the source so we can see the original work and any modifications that you chose to make. 
+
 ## Setup Instructions
-1. Fork this repository and clone to your local environment. 
+1. Fork this repository and clone to your local environment. If you make your fork private, 
 1. Install a version of Python 3 if you do not already have one. We recommend Python 3.8 or newer.
 1. You can use the built-in virtual environment creation within Python to create a sandboxed set of package installs. 
    If you already have a preferred method of virtualenv creation, feel free to proceed with your own method. 
    `python -m venv env`    
 1. You will need to activate your virtual environment each time you want to work on your project. 
    Run the `activate` script within the `env/bin` folder that was generated.
+1. We have provided a `requirements.txt` file you can use to install the necessary packages.
+   With your virtualenv activated run: `pip install -r requirements.txt`
 1. To run the django server run `python manage.py runserver`
 1. To run the data import command run `python manage.py import_house_data`
 1. You are now setup and ready to start coding. 
@@ -75,5 +85,6 @@ with additional context if you would like to. Additionally, we have left a spot 
 ### Anything else needed to make this production ready?
 
 
-
+## How to Use
+*Provide any end user documentation you think is necessary and useful here*
 
