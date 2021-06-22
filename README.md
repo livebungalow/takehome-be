@@ -38,7 +38,11 @@ We know you are busy and likely have other commitments in your life, so we don't
 We don't expect you to spend more than 2 hours working on this project. That being said, if you choose to put more or
 less time into it for whatever reason, that is your choice. Feel free to indicate in your notes below if you worked on
 this for a different amount of time and we will keep that in mind while evaluating the project. You can also provide us
-with additional context if you would like to. Additionally, we have left a spot below for you to note
+with additional context if you would like to. Additionally, we have left a spot below for you to note. If you have ideas 
+for pieces that you would have done differently or additional things you would have implemented if you had more time, 
+you can indicate those in your notes below as well, and we will use those as part of the evaluation. For example, if you 
+would have tested more, you can describe the tests that you would have written, and just provide 1 or 2 actual implemented
+tests.
 
 ## Public Forks
 We encourage you to try this project without looking at the solutions others may have posted. This will give the most
