@@ -28,7 +28,7 @@ To do this, we will review your code with an eye for the following:
 
 - Design Choices - choice of functionality, readability, maintainability, extendability, appropriate use of language/framework features
 - Does it work as outlined
-- Testing - have you chosen to write tests, did you cover both happy path and various other conditions
+- Testing - have you considered how you'd test your code?
 - Documentation - have you provided context around decisions and assumptions that you have made?
 - Polish - have you produced something that would be ready to go into a production system?
   if not, have you clearly stated what would be needed to get from where it is to that level of polish?
