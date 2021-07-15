@@ -53,7 +53,7 @@ As such, if you do end up referencing someone else's work and building upon it, 
 Provide a link to the source so we can see the original work and any modifications that you chose to make. 
 
 ## Setup Instructions
-1. Fork this repository and clone to your local environment. If you make your fork private, 
+1. Fork this repository and clone to your local environment. If you make your fork private, please give access to the `bungalow-engineering` user. 
 1. Install a version of Python 3 if you do not already have one. We recommend Python 3.8 or newer.
 1. You can use the built-in virtual environment creation within Python to create a sandboxed set of package installs. 
    If you already have a preferred method of virtualenv creation, feel free to proceed with your own method. 
