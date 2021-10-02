@@ -26,7 +26,6 @@ def populate_tables(df, size=None):
         df = df.loc[:size]
     for i in df.index:
         row_data = df.loc[i].to_dict()
-
         for key, val in row_data.items():
             if str(val) in ('nan', 'NaT'):
                 row_data[key] = None
@@ -53,7 +52,7 @@ def populate_tables(df, size=None):
         )
 
         home = Home.objects.create(
-            area_unit=row_data['area_unit'].strip(),
+            area_unit=row_data[' area_unit'],
             bathrooms=row_data['bathrooms'],
             bedrooms=row_data['bedrooms'],
             home_size=row_data['home_size'],
@@ -69,6 +68,7 @@ def populate_tables(df, size=None):
             address=address,
             zillow_data=zillow_data
         )
+        print(home)
 
 
-populate_tables()
+populate_tables(df)
