@@ -68,27 +68,30 @@ Provide a link to the source so we can see the original work and any modificatio
 
 
 # Your Notes
-*TODO: Add your documentation here* 
-
+- To test the code locally set takehome-be/listings as the project root
+- You can run all the unit tests directly by running test_runner.py
+- The API end point for getting homes is your_local_host/api/homes/ 
+- The API allows for complex url queries such as api/homes/?last_sold_date__range=2017-12-18, 2017-12-20
+- I implemented separate API endpoints for querying addresses and Zillow data; api/addresses/, api/zillowdata. 
+They allow the same kind of complex url queries as the home endpoint
 ## Time Spent
-*Give us a rough estimate of the time you spent working on this. If you spent time learning in order to do this project please feel free to let us know that too.*
-*This makes sure that we are evaluating your work fairly and in context. It also gives us the opportunity to learn and adjust our process if needed.*
+I spent roughly two hours building the API and another half hour adding some simple tests
 
 ## Assumptions
-*Did you find yourself needing to make assumptions to finish this?*
-*If so, what were they and how did they impact your design/code?*
+An end point for POST request for adding a hotel object is not a project requirement
 
 
 ## Next Steps
-*Provide us with some notes about what you would do next if you had more time.* 
-*Are there additional features that you would want to add? Specific improvements to your code you would make?*
-### Features
+- POST request for adding a new home
+- Read only access for unauthorized user access
+- Additional test cases for nested queries
+- Migration to MySQL or PostgreSQL
 
 ### Testing
 
 ### Anything else needed to make this production ready?
+- Migration to MySQL or PostgreSQL
 
 
 ## How to Use
-*Provide any end user documentation you think is necessary and useful here*
-
+- Please refer back to Notes
