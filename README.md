@@ -68,8 +68,8 @@ Provide a link to the source so we can see the original work and any modificatio
 
 
 # Your Notes
+- To load the csv data onto the database, run import_house_data.py script (doesn't support manage.py command)
 - To test the code locally set takehome-be/listings as the project root
-- You can run all the unit tests directly by running test_runner.py
 - The API end point for getting homes is your_local_host/api/homes/ 
 - The API allows for complex url queries such as api/homes/?last_sold_date__range=2017-12-18, 2017-12-20
 - I implemented separate API endpoints for querying addresses and Zillow data; api/addresses/, api/zillowdata. 
@@ -88,6 +88,7 @@ An end point for POST request for adding a hotel object is not a project require
 - Migration to MySQL or PostgreSQL
 
 ### Testing
+- You can run all the unit tests directly by running test_runner.py
 
 ### Anything else needed to make this production ready?
 - Migration to MySQL or PostgreSQL
