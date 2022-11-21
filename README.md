@@ -68,7 +68,30 @@ Provide a link to the source so we can see the original work and any modificatio
 
 
 # Your Notes
-*TODO: Add your documentation here* 
+
+1. Fork this repository and clone to your local environment. If you make your fork private, please give access to the `bungalow-engineering` user. 
+1. Install a version of Python 3 if you do not already have one. We recommend Python 3.8 or newer.
+1. You can use the built-in virtual environment creation within Python to create a sandboxed set of package installs. 
+   If you already have a preferred method of virtualenv creation, feel free to proceed with your own method. 
+   `python3 -m venv env`. 
+1. You will need to activate your virtual environment each time you want to work on your project. 
+   Run the `activate` script within the `env/bin` folder that was generated `source env/bin/activate`.
+1. We have provided a `requirements.txt` file you can use to install the necessary packages.
+   With your virtualenv activated run: `pip3 install -r requirements.txt`
+   `cd /listings`
+1. To run the django server run `python3 manage.py runserver`
+1. To run the data import command run `python3 manage.py import_house_data`
+1. You are now setup and ready to start coding.
+
+python3 manage.py createsuperuser - to use the admin site
+
+Having to google most things since I am not familiar with dhango
+Not sure about the character/ integer maz length for the db
+Not the most familiar with working with a db like this + cvs
+Manually made the model still need to figure out how to import the csv and apply the model
+python3 manage.py makemigrations api
+python3 manage.py sqlmigrate api 0001
+python3 manage.py migrate
 
 ## Time Spent
 *Give us a rough estimate of the time you spent working on this. If you spent time learning in order to do this project please feel free to let us know that too.*

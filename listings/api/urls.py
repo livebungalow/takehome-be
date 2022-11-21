@@ -5,6 +5,8 @@ from . import views
 
 # TODO: Create your routers and urls here
 router = SimpleRouter()
+router.register(r'users', views.UserViewSet)
+router.register(r'groups', views.GroupViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),

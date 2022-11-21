@@ -1,3 +1,27 @@
 from django.db import models
 
 # TODO: Create your models here.
+class Listings(models.Model):
+    area_unit = models.CharField(max_length=100,blank=True)
+    bathrooms = models.CharField(max_length=100,blank=True)
+    bedrooms = models.CharField(max_length=100,blank=True)
+    home_size= models.CharField(max_length=100,blank=True)
+    home_type =models.CharField(max_length=100,blank=True)
+    last_sold_date = models.CharField(max_length=100,blank=True)
+    last_sold_price = models.CharField(max_length=100,blank=True)
+    link = models.CharField(max_length=100, default="",blank=True)
+    price = models.CharField(max_length=100,blank=True)
+    property_size = models.CharField(max_length=100,blank=True)
+    rent_price = models.CharField(max_length=100,blank=True)
+    rentzestimate_amount = models.CharField(max_length=100,blank=True)
+    rentzestimate_last_updated = models.CharField(max_length=100,blank=True)
+    tax_value = models.CharField(max_length=100,blank=True)
+    tax_year = models.CharField(max_length=100,blank=True)
+    year_built = models.CharField(max_length=100,blank=True)
+    zestimate_amount = models.CharField(max_length=100,blank=True)
+    zestimate_last_updated = models.CharField(max_length=100,blank=True)
+    zillow_id = models.CharField(max_length=100,blank=True)
+    address = models.CharField(max_length=100,blank=True)
+    city = models.CharField(max_length=100,blank=True)
+    state = models.CharField(max_length=100,blank=True)
+    zipcode = models.CharField(max_length=100,blank=True)
