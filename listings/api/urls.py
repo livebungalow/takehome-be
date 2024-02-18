@@ -1,10 +1,12 @@
 from django.urls import include, path
-from rest_framework.routers import SimpleRouter
+from rest_framework.routers import DefaultRouter
 
-from . import views
+from api import views
 
-# TODO: Create your routers and urls here
-router = SimpleRouter()
+router = DefaultRouter()
+router.register(r'homes', views.HomeViewSet)
+router.register(r'sales', views.SaleDataViewSet)
+router.register(r'rents', views.RentDataViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
