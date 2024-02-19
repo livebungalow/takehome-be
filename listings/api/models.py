@@ -29,7 +29,7 @@ class Home(models.Model):
 class RentData(models.Model):
     home = models.ForeignKey(Home, null=False, on_delete=models.CASCADE)
 
-    rent_price = models.CharField("Rent Price", max_length=255, null=True, blank=True)
+    rent_price = models.IntegerField("Rent Price", null=True, blank=True)
     rent_estimate_price = models.IntegerField("Rent Estimate", default=None, null=True)
     rent_estimate_last_update = models.DateField(null=True)
 

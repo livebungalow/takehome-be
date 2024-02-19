@@ -1,0 +1,44 @@
+[
+    {
+        "model": "api.Home",
+        "fields": {
+            "id": 0,
+            "address": "123 Address Str",
+            "city": "Toronto",
+            "state": "CA",
+            "zipcode": "91307",
+            "bathrooms": 1,
+            "bedrooms": 1,
+            "year_built": 2020,
+            "tax_year": 2018,
+            "tax_value": 5000,
+            "home_size": 123,
+            "lot_size": 1235,
+            "estimate_amount": 1000000,
+            "estimate_last_update": "2022-06-22",
+            "market_price": "1M",
+            "home_type": "SingleFamily",
+            "link": "https://www.test.com/testurl-1"
+        }
+    },
+    {
+        "model": "api.RentData",
+        "fields": {
+            "id": 0,
+            "home_id": 0,
+            "rent_price": 2400,
+            "rent_estimate_price": 2500,
+            "rent_estimate_last_update": "2022-06-22"
+        }
+    },
+    {
+        "model": "api.SaleData",
+        "fields": {
+            "id": 0,
+            "home_id": 0,
+            "listing_date": "2022-06-22",
+            "sale_date": "2022-06-23",
+            "price": 100000000
+        }
+    }
+]

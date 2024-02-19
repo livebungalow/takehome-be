@@ -1,0 +1,773 @@
+openapi: 3.0.2
+info:
+  title: ''
+  version: ''
+paths:
+  /api/homes/:
+    get:
+      operationId: listHomes
+      description: ''
+      parameters:
+      - name: location
+        required: false
+        in: query
+        description: location
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Home'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createHome
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Home'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Home'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Home'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Home'
+          description: ''
+      tags:
+      - api
+  /api/homes/{id}/:
+    get:
+      operationId: retrieveHome
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this home.
+        schema:
+          type: string
+      - name: location
+        required: false
+        in: query
+        description: location
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Home'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateHome
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this home.
+        schema:
+          type: string
+      - name: location
+        required: false
+        in: query
+        description: location
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Home'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Home'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Home'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Home'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateHome
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this home.
+        schema:
+          type: string
+      - name: location
+        required: false
+        in: query
+        description: location
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Home'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Home'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Home'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Home'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyHome
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this home.
+        schema:
+          type: string
+      - name: location
+        required: false
+        in: query
+        description: location
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/sales/:
+    get:
+      operationId: listSaleDatas
+      description: ''
+      parameters:
+      - name: home_id
+        required: false
+        in: query
+        description: home_id
+        schema:
+          type: string
+      - name: listing_date
+        required: false
+        in: query
+        description: listing_date
+        schema:
+          type: string
+      - name: sale_date
+        required: false
+        in: query
+        description: sale_date
+        schema:
+          type: string
+      - name: price
+        required: false
+        in: query
+        description: price
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/SaleData'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createSaleData
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SaleData'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/SaleData'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/SaleData'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SaleData'
+          description: ''
+      tags:
+      - api
+  /api/sales/{id}/:
+    get:
+      operationId: retrieveSaleData
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this sale data.
+        schema:
+          type: string
+      - name: home_id
+        required: false
+        in: query
+        description: home_id
+        schema:
+          type: string
+      - name: listing_date
+        required: false
+        in: query
+        description: listing_date
+        schema:
+          type: string
+      - name: sale_date
+        required: false
+        in: query
+        description: sale_date
+        schema:
+          type: string
+      - name: price
+        required: false
+        in: query
+        description: price
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SaleData'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateSaleData
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this sale data.
+        schema:
+          type: string
+      - name: home_id
+        required: false
+        in: query
+        description: home_id
+        schema:
+          type: string
+      - name: listing_date
+        required: false
+        in: query
+        description: listing_date
+        schema:
+          type: string
+      - name: sale_date
+        required: false
+        in: query
+        description: sale_date
+        schema:
+          type: string
+      - name: price
+        required: false
+        in: query
+        description: price
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SaleData'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/SaleData'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/SaleData'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SaleData'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateSaleData
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this sale data.
+        schema:
+          type: string
+      - name: home_id
+        required: false
+        in: query
+        description: home_id
+        schema:
+          type: string
+      - name: listing_date
+        required: false
+        in: query
+        description: listing_date
+        schema:
+          type: string
+      - name: sale_date
+        required: false
+        in: query
+        description: sale_date
+        schema:
+          type: string
+      - name: price
+        required: false
+        in: query
+        description: price
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SaleData'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/SaleData'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/SaleData'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SaleData'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroySaleData
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this sale data.
+        schema:
+          type: string
+      - name: home_id
+        required: false
+        in: query
+        description: home_id
+        schema:
+          type: string
+      - name: listing_date
+        required: false
+        in: query
+        description: listing_date
+        schema:
+          type: string
+      - name: sale_date
+        required: false
+        in: query
+        description: sale_date
+        schema:
+          type: string
+      - name: price
+        required: false
+        in: query
+        description: price
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/rents/:
+    get:
+      operationId: listRentDatas
+      description: ''
+      parameters:
+      - name: home_id
+        required: false
+        in: query
+        description: home_id
+        schema:
+          type: string
+      - name: rent_estimate_update
+        required: false
+        in: query
+        description: rent_estimate_update
+        schema:
+          type: string
+      - name: rent_estimate_price
+        required: false
+        in: query
+        description: rent_estimate_price
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/RentData'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createRentData
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RentData'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/RentData'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/RentData'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RentData'
+          description: ''
+      tags:
+      - api
+  /api/rents/{id}/:
+    get:
+      operationId: retrieveRentData
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this rent data.
+        schema:
+          type: string
+      - name: home_id
+        required: false
+        in: query
+        description: home_id
+        schema:
+          type: string
+      - name: rent_estimate_update
+        required: false
+        in: query
+        description: rent_estimate_update
+        schema:
+          type: string
+      - name: rent_estimate_price
+        required: false
+        in: query
+        description: rent_estimate_price
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RentData'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateRentData
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this rent data.
+        schema:
+          type: string
+      - name: home_id
+        required: false
+        in: query
+        description: home_id
+        schema:
+          type: string
+      - name: rent_estimate_update
+        required: false
+        in: query
+        description: rent_estimate_update
+        schema:
+          type: string
+      - name: rent_estimate_price
+        required: false
+        in: query
+        description: rent_estimate_price
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RentData'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/RentData'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/RentData'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RentData'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateRentData
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this rent data.
+        schema:
+          type: string
+      - name: home_id
+        required: false
+        in: query
+        description: home_id
+        schema:
+          type: string
+      - name: rent_estimate_update
+        required: false
+        in: query
+        description: rent_estimate_update
+        schema:
+          type: string
+      - name: rent_estimate_price
+        required: false
+        in: query
+        description: rent_estimate_price
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RentData'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/RentData'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/RentData'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RentData'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyRentData
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this rent data.
+        schema:
+          type: string
+      - name: home_id
+        required: false
+        in: query
+        description: home_id
+        schema:
+          type: string
+      - name: rent_estimate_update
+        required: false
+        in: query
+        description: rent_estimate_update
+        schema:
+          type: string
+      - name: rent_estimate_price
+        required: false
+        in: query
+        description: rent_estimate_price
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+components:
+  schemas:
+    Home:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        link:
+          type: string
+          format: uri
+          maxLength: 200
+          pattern: "^(?:[a-z0-9.+-]*)://(?:[^\\s:@/]+(?::[^\\s:@/]*)?@)?(?:(?:0|25[0-5]|2[0-4]\\\
+            d|1\\d?\\d?|[1-9]\\d?)(?:\\.(?:0|25[0-5]|2[0-4]\\d|1\\d?\\d?|[1-9]\\d?)){3}|\\\
+            [[0-9a-f:.]+\\]|([a-z\xA1-\uFFFF0-9](?:[a-z\xA1-\uFFFF0-9-]{0,61}[a-z\xA1\
+            -\uFFFF0-9])?(?:\\.(?!-)[a-z\xA1-\uFFFF0-9-]{1,63}(?<!-))*\\.(?!-)(?:[a-z\xA1\
+            -\uFFFF-]{2,63}|xn--[a-z0-9]{1,59})(?<!-)\\.?|localhost))(?::\\d{2,5})?(?:[/?#][^\\\
+            s]*)?\\z"
+        address:
+          type: string
+          maxLength: 255
+        city:
+          type: string
+          maxLength: 255
+        state:
+          type: string
+          maxLength: 2
+        zipcode:
+          type: string
+          maxLength: 255
+        bathrooms:
+          type: number
+          nullable: true
+        bedrooms:
+          type: number
+        year_built:
+          type: integer
+          nullable: true
+        tax_year:
+          type: integer
+          nullable: true
+        tax_value:
+          type: number
+          nullable: true
+        home_size:
+          type: integer
+          nullable: true
+        lot_size:
+          type: integer
+          nullable: true
+        area_unit:
+          type: string
+          maxLength: 255
+        home_type:
+          enum:
+          - SINGLE_FAMILY
+          - MULTI_FAMILY
+          - VACANT_RESIDENTIAL_LAND
+          - CONDO
+          - APARTMENT
+          - DUPLEX
+          - MISCEKLLANEOUS
+          type: string
+        estimate_amount:
+          type: integer
+          nullable: true
+        estimate_last_update:
+          type: string
+          format: date
+        market_price:
+          type: string
+          maxLength: 255
+      required:
+      - link
+      - address
+      - city
+      - state
+      - zipcode
+      - bedrooms
+      - home_type
+      - estimate_last_update
+      - market_price
+    SaleData:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        listing_date:
+          type: string
+          format: date
+          nullable: true
+        sale_date:
+          type: string
+          format: date
+          nullable: true
+        price:
+          type: integer
+          nullable: true
+        home:
+          type: integer
+      required:
+      - home
+    RentData:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        rent_price:
+          type: integer
+          nullable: true
+        rent_estimate_price:
+          type: integer
+          nullable: true
+        rent_estimate_last_update:
+          type: string
+          format: date
+          nullable: true
+        home:
+          type: integer
+      required:
+      - home

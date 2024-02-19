@@ -1,3 +1,6 @@
 django >= 3.2, < 3.3
 djangorestframework >= 3.12, < 3.13
+djangorestframework-queryfields==1.0.0
 django-filter >= 23.5
+pytest==6.2.5
+pytest-django==4.1.0

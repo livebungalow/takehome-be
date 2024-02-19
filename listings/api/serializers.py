@@ -1,8 +1,10 @@
 from rest_framework import serializers
+from drf_queryfields import QueryFieldsMixin
 
 from api import models
 
-class HomeSerializer(serializers.ModelSerializer):
+class HomeSerializer(QueryFieldsMixin,
+                     serializers.ModelSerializer):
     class Meta:
         model = models.Home
         # Choosing to be explicit with the fields here as it
@@ -28,7 +30,9 @@ class HomeSerializer(serializers.ModelSerializer):
             "market_price"
         ]
 
-class RentDataSerializer(serializers.ModelSerializer):
+class RentDataSerializer(QueryFieldsMixin,
+                         serializers.ModelSerializer):
+
     class Meta:
         model = models.RentData
         fields = [
@@ -36,10 +40,12 @@ class RentDataSerializer(serializers.ModelSerializer):
             "rent_price",
             "rent_estimate_price",
             "rent_estimate_last_update",
-            "home_id"
+            "home"
         ]
 
-class SaleDataSerializer(serializers.ModelSerializer):
+class SaleDataSerializer(QueryFieldsMixin,
+                         serializers.ModelSerializer):
+    
     class Meta:
         model = models.SaleData
         fields = [
@@ -47,5 +53,5 @@ class SaleDataSerializer(serializers.ModelSerializer):
             "listing_date",
             "sale_date",
             "price",
-            "home_id"
+            "home"
         ]
