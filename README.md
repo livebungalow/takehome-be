@@ -74,21 +74,38 @@ Provide a link to the source so we can see the original work and any modificatio
 *Give us a rough estimate of the time you spent working on this. If you spent time learning in order to do this project please feel free to let us know that too.*
 *This makes sure that we are evaluating your work fairly and in context. It also gives us the opportunity to learn and adjust our process if needed.*
 
+I spent about 1.5 - 2 hours working on this project.
+
 ## Assumptions
 *Did you find yourself needing to make assumptions to finish this?*
 *If so, what were they and how did they impact your design/code?*
+
+I did have to make some assumptions. One such assumption was the idea that a home could have been sold/rented multiple times before. As such I designed the DB to assume that there could have been multiple sales data or rent data for a single Home. It also meant that I would need to include the ability to filter/query for sales/rents within time ranges or price ranges for a single home.
 
 
 ## Next Steps
 *Provide us with some notes about what you would do next if you had more time.* 
 *Are there additional features that you would want to add? Specific improvements to your code you would make?*
+
+
 ### Features
+
+If I had more time I would probably add in a caching system or even something similar to elastic search to reduce query times on larger sets of data. 
+
+Some extra improvements would be to add some better error logging and insights to the project in the event that something does go wrong, or even a performance profiler that takes a small sample of requests and gives us some info on that.
+
 
 ### Testing
 
+In terms of testing I would create a load test using Jmeter to ensure that the api service can still be responsive under load. I would also create an endpoint test using magicmock to mock fake authenticated users to ensure that our authorization on endpoints works the way we expect
+
 ### Anything else needed to make this production ready?
 
+As this currently stands, I believe that if we were to set up the server to use gunicorn with gevents to host the server. The server should be able to handle a moderate amount of load without any issues.
 
 ## How to Use
 *Provide any end user documentation you think is necessary and useful here*
 
+The API Schema has been generated and can be found in the `openapi-schema.yml` file.
+
+You can load this in on postman to begin testing endpoints
